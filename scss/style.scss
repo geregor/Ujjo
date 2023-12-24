@@ -255,6 +255,9 @@ main {
         align-items: center;
         gap: 28px;
         text-wrap: nowrap;
+        will-change: transform;
+        animation: text-display 3s linear infinite;
+        animation-direction: inherit;
     }
 }
 
@@ -272,5 +275,11 @@ main {
     &-num2 {
         grid-area: 2 / 2 / 5 / 3;
         @include center;
+    }
+}
+
+@keyframes text-display {
+    to {
+        transform: translateX(-374px);
     }
 }

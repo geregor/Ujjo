@@ -235,6 +235,9 @@ main {
   align-items: center;
   gap: 28px;
   text-wrap: nowrap;
+  will-change: transform;
+  animation: text-display 3s linear infinite;
+  animation-direction: inherit;
 }
 
 .photo img {
@@ -252,6 +255,12 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes text-display {
+  to {
+    transform: translateX(-374px);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
