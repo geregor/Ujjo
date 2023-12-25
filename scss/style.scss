@@ -3,6 +3,7 @@ span, a, h1, p, h2 {
     text-transform: uppercase;
 }
 
+
 h2, p, h1 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -15,9 +16,8 @@ body {
 
 header {
     border: 1px solid;
-    width: 1387px;
+    width: 1398px;
     margin: 0 auto;
-    padding: 30px 29px 30px 22px;
 }
 
 .nav {
@@ -27,6 +27,9 @@ header {
     margin-block-start: 0;
     margin-block-end: 0;
     padding-inline-start: 0;
+    margin: 0 auto;
+    width: 1346px;
+    padding: 21px 0 21px 0;
     &-button {
         width: 157px;
         height: 52px;
@@ -85,13 +88,12 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 986px 271px 699px 76px 721px 698px 76px 757px 65px;
     //                        |     |     |    |     
-    width: 1440px;
+    width: 1400px;
     margin: 0 auto;
 }
 
 .block {
     &-first {
-        width: 1440px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 233px 190px 78px 485px;
@@ -113,7 +115,7 @@ main {
         display: flex;
         position: relative;
         .items {
-            width: -webkit-fill-available;;
+            width: -webkit-fill-available;
             margin: 0 22px;
             display: flex;
             justify-content: space-between;
@@ -149,7 +151,7 @@ main {
         }
     }
 
-    &-fourth {
+    &-fourth, &-seven {
         border: 1px solid;
     }
 
@@ -167,8 +169,36 @@ main {
     &-six {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        div {
-            border: 1px solid;
+    }
+
+    &-eight {
+        position: relative;
+        border: 1px solid;
+        overflow: hidden;
+        @include center;
+
+        .frame {
+            position: absolute;
+            width: 1354px;
+            height: 716px;
+        }
+
+        .angles {
+            position: absolute;
+            margin: auto;
+            height: -webkit-fill-available;
+            width: -webkit-fill-available;
+
+            img {
+                width: 89px;
+                height: 89px;
+                border: 1px solid;
+                border-radius: 50%;
+            }
+
+            &-circle {
+                
+            }
         }
     }
 }
@@ -225,6 +255,7 @@ main {
 
 .information {
     &-girl {
+        border: 1px solid;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -233,15 +264,66 @@ main {
         }
     }
     &-text {
+        overflow: hidden;
+        border: 1px solid;
+        position: relative;
         .background-image {
             z-index: -1;
-            height: 100%;
-            width: -we;
+        }
+
+        .stars {
+            display: flex;
+            position: absolute;
+            margin: 61px 73px 71px 71px;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            top: 0;
+            width: calc(100% - 144px);
+            height: calc(100% - 132px);
+
+            &-center {
+                width: -webkit-fill-available;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            img {
+                width: 31.818px;
+                height: 31.954px;
+            }
+        }
+
+        .animals {
+            position: absolute;
+            top: 0;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            margin: 25px 66px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .content {
+            position: absolute;
+            top: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            margin: 135px 152px;
+            text-align: center;
         }
     }
 }
 
-.running-string {
+@mixin rs-text ($anim: text-display, $time: 3s) {
     display: flex;
     align-items: center;
     max-width: 100%;
@@ -256,8 +338,16 @@ main {
         gap: 28px;
         text-wrap: nowrap;
         will-change: transform;
-        animation: text-display 3s linear infinite;
+        animation: $anim $time linear infinite;
         animation-direction: inherit;
+    }
+}
+
+.running-string {
+    @include rs-text;
+
+    &-second {
+        @include rs-text(text-display2,6.76s)
     }
 }
 
@@ -281,5 +371,11 @@ main {
 @keyframes text-display {
     to {
         transform: translateX(-374px);
+    }
+}
+
+@keyframes text-display2 {
+    to {
+        transform: translateX(-843.5px);
     }
 }
