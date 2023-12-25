@@ -154,7 +154,7 @@ main {
   position: relative;
   border: 1px solid;
   overflow: hidden;
-  background-image: url("svg/big_fire.svg");
+  background-image: url(/svg/big_fire.svg);
   background-repeat: no-repeat;
   background-position-x: -113px;
   display: flex;
@@ -229,7 +229,7 @@ main {
 }
 
 .ujjo {
-  background-image: url("svg/ujjo.svg");
+  background-image: url("/svg/ujjo.svg");
   background-size: 90%;
   background-position: center;
   background-repeat: no-repeat;
@@ -242,7 +242,7 @@ main {
   margin: 128px 268px;
   height: -webkit-fill-available;
   width: -webkit-fill-available;
-  background-image: url("svg/ujjo.svg");
+  background-image: url("/svg/ujjo.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
