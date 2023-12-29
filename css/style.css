@@ -413,7 +413,7 @@ main {
     width: calc(100vw - 58px);
   }
   main {
-    grid-template-rows: 84vw 271px 699px 76px 721px 698px 76px 54vw 65px;
+    grid-template-rows: 84vw 271px 46vw 76px 721px 698px 76px 54vw 65px;
     width: 100vw;
   }
   .ujjo img {
@@ -422,15 +422,16 @@ main {
   .block-first {
     grid-template-rows: 19.8vw 16.1vw 6.6vw auto;
   }
-  .block-third .items {
-    justify-content: space-around;
-  }
   .block-third .items .item {
-    padding: 0;
-    width: 20px;
+    height: 39vw;
+    justify-content: flex-end;
+    gap: 15px;
   }
   .block-third .items .item img {
-    width: 20px;
+    width: 25vw;
+  }
+  .block-third .items .item p {
+    margin-top: 0;
   }
   .block-eight {
     background-position-x: center;

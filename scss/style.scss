@@ -434,7 +434,7 @@ main {
     }
 
     main {
-        grid-template-rows: 84vw 271px 699px 76px 721px 698px 76px 54vw 65px;
+        grid-template-rows: 84vw 271px 46vw 76px 721px 698px 76px 54vw 65px;
         width: 100vw;
     }
 
@@ -452,12 +452,16 @@ main {
 
         &-third {
             .items {
-                justify-content: space-around;
                 .item {
-                    padding: 0;
-                    width: 20px;
+                    height: 39vw;
+                    justify-content: flex-end;
+                    gap: 15px;
                     img {
-                        width: 20px;
+                        width: 25vw;
+                    }
+
+                    p {
+                        margin-top: 0;
                     }
                 }
             }
