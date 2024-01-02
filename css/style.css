@@ -504,8 +504,14 @@ main {
   }
 }
 @media screen and (max-width: 930px) {
+  .header__nav a {
+    display: none;
+  }
+  .text__article {
+    font-size: 24px;
+  }
   main {
-    grid-template-rows: 78vw 205px 50vw 50vw 76px 54vw;
+    grid-template-rows: 78vw 160px 50vw 76px 50vw 50vw 76px 54vw;
   }
   .ujjo-2 {
     margin: 14vw 28vw;
@@ -513,11 +519,27 @@ main {
   .ujjo-2 img {
     margin: 0;
   }
-  .b-fourth {
-    display: none;
+  .b-second img {
+    width: 120px;
   }
-  .b-info {
-    display: none;
+  .b-third__sandwich .sandwich-l {
+    height: 30px;
+    width: 30px;
+  }
+  .b-third__sandwich .sandwich-h {
+    width: 25px;
+  }
+  .b-third__items .items__item {
+    width: calc((100vw - 120px) / 3);
+  }
+  .b-third__items .items__item p {
+    font-size: 14px;
+  }
+  .b-third__items .items__item h2 {
+    font-size: 18px;
+  }
+  .b-third__items .items__item img {
+    margin-bottom: calc((1400px - 100vw) * 0.25 + 23px);
   }
   .b-eight .angles-circle {
     height: 66px;
