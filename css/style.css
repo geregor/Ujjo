@@ -511,7 +511,7 @@ main {
     font-size: 24px;
   }
   main {
-    grid-template-rows: 78vw 160px 50vw 76px 50vw 50vw 76px 54vw;
+    grid-template-rows: 78vw 160px 50vw 76px 50vw auto 76px 54vw;
   }
   .ujjo-2 {
     margin: 14vw 28vw;
@@ -547,6 +547,50 @@ main {
   }
   .b-eight .angles-circle img {
     width: 34px;
+  }
+  .b-info {
+    border: 1px solid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto;
+  }
+  .b-info .info-girl {
+    border: 0;
+  }
+  .b-info .info-girl h1 {
+    margin: 25px;
+  }
+  .b-info .info-girl img {
+    width: auto;
+  }
+  .b-info .info-content {
+    display: flex;
+    justify-content: center;
+    border: 0;
+    margin: 25px;
+  }
+  .b-info .info-content .content-text {
+    height: 550px;
+    width: 550px;
+    top: 160px;
+    margin: auto;
+  }
+  .b-info .info-content .content-text span {
+    font-size: 1.5rem;
+  }
+  .b-info .info-content .content-stars {
+    margin: 61px 22px 0 20px;
+    width: calc(100% - 145px);
+  }
+  .b-info .info-content .content-stars img {
+    width: 50px;
+    height: 50px;
+  }
+  .b-info .info-content .content-stars img div img {
+    width: 50px;
+    height: 50px;
+  }
+  .article-six {
+    font-size: 4rem;
   }
 }
 
