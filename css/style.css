@@ -569,13 +569,12 @@ main {
     margin: 25px;
   }
   .b-info .info-content .content-text {
-    height: 550px;
-    width: 550px;
+    width: 60vw;
     top: 160px;
-    margin: auto;
+    margin: auto auto 130px auto;
   }
   .b-info .info-content .content-text span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   .b-info .info-content .content-stars {
     margin: 61px 22px 0 20px;
@@ -591,6 +590,16 @@ main {
   }
   .article-six {
     font-size: 4rem;
+  }
+}
+@media screen and (max-width: 670px) {
+  .b-info .info-content .content-text {
+    top: 118px;
+    width: auto;
+    margin: auto 28vw 130px 28vw;
+  }
+  .b-info .info-content .content-text span {
+    font-size: 1rem;
   }
 }
 

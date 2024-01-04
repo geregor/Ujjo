@@ -675,12 +675,11 @@ main {
                 border: 0;
                 margin: 25px;
                 .content-text {
-                    height: 550px;
-                    width: 550px;
+                    width: 60vw;
                     top: 160px;
-                    margin: auto;
+                    margin: auto auto 130px auto;
                     span {
-                        font-size: 1.5rem;
+                        font-size: 1.25rem;
                     }
                 }
                 .content-stars {
@@ -704,4 +703,15 @@ main {
     }
 }
 
+@media screen and (max-width: 670px) {
+    .b-info .info-content .content-text {
+        top: 118px;
+        width: auto;
+        margin: auto 28vw 130px 28vw;
+    }
+
+    .b-info .info-content .content-text span {
+        font-size: 1rem;
+    }
+}
 
