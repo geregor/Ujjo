@@ -30,16 +30,19 @@ header.scrollDown {
 }
 
 .new-section {
-    display: flex;
+    position: fixed;
+    display: none;
     justify-content: center;
     border: 1px solid;
     padding: 15px 0;
-    z-index: 0;
+    z-index: 1;
     background-color: white;
     transition: 0.25s linear;
+    top: 0;
     ul {    
         width: 100%;
         display: flex;
+        padding: 0;
         justify-content: space-around;
     }
 
@@ -51,6 +54,10 @@ header.scrollDown {
 
 .new-section.openPopup {
     transform: translateY(92px);
+}
+
+.new-section.scrollDown {
+    transform: translate3d(0, -130px, 0);
 }
 
 .header {
@@ -99,13 +106,14 @@ header.scrollDown {
 
     &__popup {
         display: none;
-        position: relative;
+        position: absolute;
         padding: 7px 25px;
         border-radius: 0 0 25px 25px;
         border: 1px solid;
         background-color: white;
         transition: 0.25s linear;
         z-index: 0;
+        transform: translateY(66px);
         i {
             font-size: 30px;
         }
@@ -121,10 +129,6 @@ header.scrollDown {
             animation-duration: 0.25s;
             animation-timing-function: ease-in-out;
         }
-    }
-
-    &__popup.scrollDown {
-        transform: translate3d(0, -20px, 0);
     }
 }
 
@@ -586,7 +590,7 @@ main {
     }
 
     .b-first {
-        grid-template-rows: 13vw 22.9vw 6.6vw auto;
+        grid-template-rows: 13vw 22.9vw 60px auto;
     }
 
     .b-info .info-content {
@@ -651,7 +655,7 @@ main {
 @media screen and (max-width: 930px) {
 
     main {
-        margin-top: 9px;
+        margin-top: 92px;
     }
 
     .header {
@@ -670,6 +674,11 @@ main {
         a {
             display: none;
         }
+    }
+
+    .new-section {
+        display: flex;
+        width: 100%;
     }
 
     .header__popup {
@@ -695,6 +704,7 @@ main {
         &-second {
             img {
                 width: 120px;
+                margin: 5px;
             }
         }
 
@@ -762,7 +772,7 @@ main {
                 margin: 25px;
                 .content-text {
                     width: 60vw;
-                    top: 160px;
+                    top: 135px;
                     margin: auto auto 130px auto;
                     span {
                         font-size: 1.25rem;
@@ -789,13 +799,127 @@ main {
 }
 
 @media screen and (max-width: 690px) {
-    .b-info .info-content .content-text {
-        top: 118px;
-        margin: auto 28vw 130px 28vw;
+    .header__nav .nav__logo {
+        gap: 15px;
     }
 
-    .b-info .info-content .content-text span {
-        font-size: 1rem;
+    main {
+        grid-template-rows: 78vw 160px minmax(50vw, auto) 76px 50vw auto 76px 54vw;
+    }
+
+    .b {
+        &-info .info-content .content-text {
+            top: 108px;
+            margin: auto auto 106px auto;
+
+            span {
+                font-size: 1rem;
+            }
+        }
+
+        &-third__items {
+            flex-direction: column;
+
+            .items__item:first-child {
+                margin: 67px 25px 10px 25px;
+            }
+
+            .items__item {
+                height: auto;
+                padding: 5vw;
+                margin: 30px 25px 10px 25px;
+                gap: 13.5px;
+                width: fit-content;
+                .item-content {
+                    margin: 0;
+                    width: calc(100% - 150px);
+                }
+
+                p {
+                    margin-top: 70px;
+                    font-size: 14px;
+                }
+
+                h2 {
+                    font-size: 24px;
+                    text-align: center;
+                    width: max-content;
+                }
+            }
+        }
+
+        &-third__sandwich {
+            margin: 11px;
+
+            .sandwich-l {
+                height: 38px;
+                width: 38px;
+                padding: 8px;
+            }
+            .sandwich-h {
+                margin: 0 10vw;
+                width: auto;
+                padding: 8px;
+            }
+        }
+
+        &-eight .angles {
+            margin: 45px 52px;
+        }
+    }
+
+    .footer__nav {
+        margin: 20px 9vw;
+    }
+
+    .ujjo img {
+        width: calc(50vw - 60px);
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header__nav .nav__button {
+        width: 140px;
+    }
+
+    .text__article {
+        font-size: 18px;
+    }
+
+    .circle-red, .circle-purple {
+        display: none;
+    }
+
+    .b-first {
+        grid-template-rows: 13vw 22.9vw 11vw auto;
+    }
+
+    .b-info .info-content {
+        .content-text {
+            margin: auto auto 15vw auto;
+            top: 16vw;
+            span {
+                font-size: 0.875rem;
+            }
+        }
+
+        .content-stars {
+            height: calc(100% - 51px);
+            width: calc(100% - 51px);
+            margin: 28px 22px 0 20px;
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+
+    .b-eight .angles-circle {
+        width: 45px;
+        height: 45px;
+        img {
+            width: 25px;
+        }
     }
 }
 
